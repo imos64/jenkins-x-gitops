@@ -1,0 +1,6 @@
+releases:
+- name: delivery-demo
+  namespace: jx-demo
+  chart: ../charts/demo
+  values:
+  - replicas: 2

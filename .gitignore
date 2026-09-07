@@ -1,0 +1,13 @@
+.tools/
+.venv/
+__pycache__/
+site/
+.werf-deploy-report.json
+*.private.*
+*.key
+*.pem
+.env
+.env.*
+kubeconfig*
+.kube/
+.werf_secret_key

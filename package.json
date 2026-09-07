@@ -1,0 +1,33 @@
+{
+  "key": "jx",
+  "title": "Jenkins X",
+  "namespace": "jx",
+  "demoNamespace": "jx-demo",
+  "charts": [],
+  "sources": [
+    {
+      "file": "vendor/kubernetes-crd-openapi.json",
+      "url": "https://raw.githubusercontent.com/kubernetes/kubernetes/v1.35.0/api/openapi-spec/v3/apis__apiextensions.k8s.io__v1_openapi.json",
+      "sha256": "f6eb40887f8ce499c83f6032da1b35f980ecf8e6a312c06078f1356e3aa3d3e4"
+    },
+    {
+      "file": "vendor/jx3-kubernetes.tar.gz",
+      "url": "https://api.github.com/repos/jx3-gitops-repositories/jx3-kubernetes/tarball/6fd6a0cf148aa333227d7720b7bf84872f1e1e87",
+      "sha256": "04fd65a30600e9229174161ab755aaa241024caf46069e5410c89e0805adfaba"
+    }
+  ],
+  "tools": [
+    {
+      "name": "jx-gitops",
+      "url": "https://github.com/jenkins-x-plugins/jx-gitops/releases/download/v1.4.14/jx-gitops-linux-amd64.tar.gz",
+      "sha256": "516645e6b8c453643703e91451c11ae8e6c7f30a244afd7ce4e4515f513a9bdd",
+      "archive": true
+    },
+    {
+      "name": "jx",
+      "url": "https://github.com/jenkins-x/jx/releases/download/v3.17.98/jx-linux-amd64.tar.gz",
+      "sha256": "baf6da6346d9b8e046d865d74f53149079b07714e83da0cdfe33ce119a1b1ab1",
+      "archive": true
+    }
+  ]
+}
