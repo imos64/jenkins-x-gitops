@@ -6,6 +6,20 @@
 
 Independent deployment examples maintained by imos64. Upstream software remains maintained by its respective authors. This collection does not claim a measured ranking or that every tool independently performs continuous Git reconciliation.
 
+## High-Level Architecture
+
+The supplied helper prepares a cluster Git repository from a pinned upstream template. The running Jenkins X platform, credentials and developer pipelines require the documented site bootstrap.
+
+```mermaid
+flowchart LR
+Template["Pinned upstream cluster template and site requirements"] --> Repo["Prepared cluster Git repository"]
+Repo --> Bootstrap["Site-specific Jenkins X bootstrap"]
+Bootstrap --> Platform["Jenkins X platform: Git operator and pipelines"]
+Code["Application source and chart"] --> Platform
+Platform --> Registry["Configured image and chart registry"]
+Platform --> Environments["Reviewed dev, staging and production releases"]
+```
+
 ## Local validation
 
 Requirements: Linux amd64, Python 3.12+, Helm 3.21.3 and Make. CLI downloads are checksum-verified and placed in ignored `.tools/`. Internet access is needed for tools and Kubernetes schemas. Docker is needed for werf's container smoke test.
